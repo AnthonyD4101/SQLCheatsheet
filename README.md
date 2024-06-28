@@ -76,10 +76,20 @@ Underscore (\_): Represents a single character.
 SELECT * FROM employees WHERE name LIKE 'a_';
 
 -- Finds any values that have 'a' as the second character
-SELECT \* FROM employees WHERE name LIKE '_a_';
+SELECT * FROM employees WHERE name LIKE '_a_';
 
 -- Finds any values that have exactly three characters, with 'a' as the second character
-SELECT \* FROM employees WHERE name LIKE '_a_';
+SELECT * FROM employees WHERE name LIKE '_a_';
+```
+
+Combining % and \_
+
+```sql
+-- Finds any values that start with 'a', followed by any single character, and end with 'n'
+SELECT * FROM employees WHERE name LIKE 'a_n%';
+
+-- Finds any values where 'a' is the first character, followed by any two characters, and ending with 'n'
+SELECT * FROM employees WHERE name LIKE 'a__n%';
 ```
 
 ## `JOIN` Clauses
