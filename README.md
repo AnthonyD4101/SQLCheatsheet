@@ -54,6 +54,20 @@ SUM() - returns the total sum of a numerical column
 AVG() - returns the average value of a numerical column
 ```
 
+<br>
+
+`GROUP BY` statement groups rows that have the same values into summary rows.
+
+<br>
+
+`HAVING` clause is used in conjuction with the `GROUP BY` clause, as it filters groups of rows that are returned by the `GROUP BY` clause.
+
+<br>
+
+### `WHERE` Vs. `HAVING`
+
+`WHERE` clause is used to filter rows before any grouping is done, while with the `HAVING` clause, the filtering is done after the data has been grouped.
+
 ## Wildcard Operators
 
 Percent Sign (%): Represents zero, one, or multiple characters.
@@ -93,3 +107,11 @@ SELECT * FROM employees WHERE name LIKE 'a__n%';
 ```
 
 ## `JOIN` Clauses
+
+Is used to combine rows from two tables based on a common column and selects records that have matching values in these columns
+
+```sql
+SELECT columnName1, columnName2, ...
+FROM table1
+JOIN table2 ON table1.column1 = table2.column2
+```
